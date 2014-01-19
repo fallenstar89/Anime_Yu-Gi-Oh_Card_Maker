@@ -1,0 +1,8 @@
+Magic and Spell are the exact same, except for the word "Magic," or the word "Spell" on the card. I assume you know the story behind the Magic/Spell cards, so I'll leave that alone.
+
+Everything else here should be HD, and easy to put into your program. Let me know if you need anything else from me.
+
+Also, as a side note, you may have to change where the text boxes for the ATK and DEF go. You should also change the ATK and DEF fonts to the one in this Zip. If that is not possible, then, please, make a note of it.
+
+Thanks.
+-E.
