@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Collections;
+
 
 namespace Anime_Yu_Gi_Oh_Card_Maker
 {
@@ -18,19 +20,19 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
         {
             InitializeComponent();
         }
-
+        String IconSeletion="Wind";
+        String CardSeletion;
+        String LevelSelection;
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", "-p");
-            Image mainImage = Bitmap.FromFile("Resources/Fusion.jpg");
-            Image Icon = Bitmap.FromFile("Resources/Dark.png");
-            Image Level = Bitmap.FromFile("Resources/1.png");
+            String ATK = ATKt.Text;
+            String DEF = DEFt.Text;
+            Image mainImage = Bitmap.FromFile("Resources/" + "Fusion" + ".jpg");
+            Image Icon = Bitmap.FromFile("Resources/" + IconSeletion + ".png");
+            Image Level = Bitmap.FromFile("Resources/" + LevelSelection + ".png");
 
             Rectangle rect1 = new Rectangle(49, 505, 261, 506);
             Rectangle rect2 = new Rectangle(49, 505, 261, 506);
-
-            string ATK = "210";
-            string DEF = "300";
 
             StringFormat stringFormat = new StringFormat()
             {
@@ -46,9 +48,9 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
                 //draw other image on top of main Image
                 g.DrawImage(Icon, new Point(0, 0));
                 g.DrawImage(Level, new Point(0, 0));
-
-                SizeF s = g.MeasureString(ATK, this.Font);
-                float fontScale = Math.Max(s.Width / rect1.Width, s.Height / rect1.Height);
+               // if (string.IsNullOrEmpty(ATK)) { ATK = "800"; };
+                SizeF si = g.MeasureString(ATK, this.Font);
+                float fontScale = 15;
                 using (Font font = new Font("EuroRoman", this.Font.SizeInPoints / fontScale, GraphicsUnit.Point))
                 {
                     g.DrawString(ATK, font, Brushes.Black, rect1, stringFormat);
@@ -63,6 +65,30 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
                        
         }
 
+        private void Element_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IconSeletion = Element.SelectedItem.ToString();
+      
+        }
+
+
+        private void Fusion_Click(object sender, EventArgs e)
+        {
+             CardSeletion = "Fusion";
+        }
+
+        private void Level_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LevelSelection = Level.SelectedItem.ToString();
+        }
+
+       
+
+
+
+
+
+     
 
     }
 }

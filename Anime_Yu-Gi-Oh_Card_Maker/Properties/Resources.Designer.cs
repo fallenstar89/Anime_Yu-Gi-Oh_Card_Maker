@@ -63,6 +63,26 @@ namespace Anime_Yu_Gi_Oh_Card_Maker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Duelist_Kingdom_Card__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Duelist Kingdom Card (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Effect__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Effect (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fusion {
             get {
                 object obj = ResourceManager.GetObject("Fusion", resourceCulture);
@@ -76,6 +96,86 @@ namespace Anime_Yu_Gi_Oh_Card_Maker.Properties {
         internal static System.Drawing.Bitmap Fusion__69x100_ {
             get {
                 object obj = ResourceManager.GetObject("Fusion (69x100)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Legendary_Dragon__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Legendary Dragon (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Legendary_Dragon__Custom_1 {
+            get {
+                object obj = ResourceManager.GetObject("Legendary Dragon (Custom)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Magic__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Magic (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Normal_Monster__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Normal Monster (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ritual__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Ritual (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Synchro__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Synchro (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Token__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Token (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trap__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Trap (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

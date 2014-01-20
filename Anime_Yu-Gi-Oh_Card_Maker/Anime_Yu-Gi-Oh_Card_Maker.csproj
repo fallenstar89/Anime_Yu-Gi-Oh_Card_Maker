@@ -169,9 +169,6 @@
     <EmbeddedResource Include="Resources\Magic.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Normal Monster.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Read.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -210,6 +207,36 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legendary Dragon %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duelist Kingdom Card %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Effect %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal Monster %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ritual %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchro %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Token %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trap %28Custom%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NormalMonster.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
