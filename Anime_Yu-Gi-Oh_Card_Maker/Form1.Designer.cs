@@ -36,17 +36,17 @@
             this.Element = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LegendaryDragon = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Effect = new System.Windows.Forms.Button();
+            this.Trap = new System.Windows.Forms.Button();
+            this.Magic = new System.Windows.Forms.Button();
+            this.NormalMonster = new System.Windows.Forms.Button();
+            this.Ritual = new System.Windows.Forms.Button();
+            this.Synchro = new System.Windows.Forms.Button();
+            this.Token = new System.Windows.Forms.Button();
             this.Fusion = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Level = new System.Windows.Forms.ComboBox();
+            this.DuelistKingdomCard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -129,86 +129,84 @@
             this.LegendaryDragon.Size = new System.Drawing.Size(71, 104);
             this.LegendaryDragon.TabIndex = 26;
             this.LegendaryDragon.UseVisualStyleBackColor = true;
+            this.LegendaryDragon.Click += new System.EventHandler(this.LegendaryDragon_Click);
             // 
-            // button9
+            // Effect
             // 
-            this.button9.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Duelist_Kingdom_Card__Custom_;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button9.Location = new System.Drawing.Point(489, 91);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(71, 104);
-            this.button9.TabIndex = 25;
-            this.button9.UseVisualStyleBackColor = true;
+            this.Effect.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Effect__Custom_;
+            this.Effect.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Effect.Location = new System.Drawing.Point(579, 91);
+            this.Effect.Name = "Effect";
+            this.Effect.Size = new System.Drawing.Size(71, 104);
+            this.Effect.TabIndex = 24;
+            this.Effect.UseVisualStyleBackColor = true;
+            this.Effect.Click += new System.EventHandler(this.Effect_Click);
             // 
-            // button8
+            // Trap
             // 
-            this.button8.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Effect__Custom_;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button8.Location = new System.Drawing.Point(579, 91);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(71, 104);
-            this.button8.TabIndex = 24;
-            this.button8.UseVisualStyleBackColor = true;
+            this.Trap.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Trap__Custom_;
+            this.Trap.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Trap.Location = new System.Drawing.Point(656, 91);
+            this.Trap.Name = "Trap";
+            this.Trap.Size = new System.Drawing.Size(71, 104);
+            this.Trap.TabIndex = 23;
+            this.Trap.UseVisualStyleBackColor = true;
+            this.Trap.Click += new System.EventHandler(this.Trap_Click);
             // 
-            // button7
+            // Magic
             // 
-            this.button7.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Trap__Custom_;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button7.Location = new System.Drawing.Point(656, 91);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(71, 104);
-            this.button7.TabIndex = 23;
-            this.button7.UseVisualStyleBackColor = true;
+            this.Magic.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Magic__Custom_;
+            this.Magic.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Magic.Location = new System.Drawing.Point(310, 201);
+            this.Magic.Name = "Magic";
+            this.Magic.Size = new System.Drawing.Size(71, 104);
+            this.Magic.TabIndex = 22;
+            this.Magic.UseVisualStyleBackColor = true;
+            this.Magic.Click += new System.EventHandler(this.Magic_Click);
             // 
-            // button6
+            // NormalMonster
             // 
-            this.button6.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Magic__Custom_;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button6.Location = new System.Drawing.Point(310, 201);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(71, 104);
-            this.button6.TabIndex = 22;
-            this.button6.UseVisualStyleBackColor = true;
+            this.NormalMonster.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Normal_Monster__Custom_;
+            this.NormalMonster.Cursor = System.Windows.Forms.Cursors.Default;
+            this.NormalMonster.Location = new System.Drawing.Point(402, 201);
+            this.NormalMonster.Name = "NormalMonster";
+            this.NormalMonster.Size = new System.Drawing.Size(71, 104);
+            this.NormalMonster.TabIndex = 21;
+            this.NormalMonster.UseVisualStyleBackColor = true;
+            this.NormalMonster.Click += new System.EventHandler(this.NormalMonster_Click);
             // 
-            // button5
+            // Ritual
             // 
-            this.button5.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Normal_Monster__Custom_;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button5.Location = new System.Drawing.Point(402, 201);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(71, 104);
-            this.button5.TabIndex = 21;
-            this.button5.UseVisualStyleBackColor = true;
+            this.Ritual.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Ritual__Custom_;
+            this.Ritual.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Ritual.Location = new System.Drawing.Point(489, 201);
+            this.Ritual.Name = "Ritual";
+            this.Ritual.Size = new System.Drawing.Size(71, 104);
+            this.Ritual.TabIndex = 20;
+            this.Ritual.UseVisualStyleBackColor = true;
+            this.Ritual.Click += new System.EventHandler(this.Ritual_Click);
             // 
-            // button4
+            // Synchro
             // 
-            this.button4.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Ritual__Custom_;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button4.Location = new System.Drawing.Point(489, 201);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 104);
-            this.button4.TabIndex = 20;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Synchro.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Synchro__Custom_;
+            this.Synchro.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Synchro.Location = new System.Drawing.Point(579, 201);
+            this.Synchro.Name = "Synchro";
+            this.Synchro.Size = new System.Drawing.Size(71, 104);
+            this.Synchro.TabIndex = 19;
+            this.Synchro.UseVisualStyleBackColor = true;
+            this.Synchro.Click += new System.EventHandler(this.Synchro_Click);
             // 
-            // button3
+            // Token
             // 
-            this.button3.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Synchro__Custom_;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.Location = new System.Drawing.Point(579, 201);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 104);
-            this.button3.TabIndex = 19;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Token__Custom_;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.Location = new System.Drawing.Point(656, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 104);
-            this.button2.TabIndex = 18;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Token.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Token__Custom_;
+            this.Token.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Token.Location = new System.Drawing.Point(656, 201);
+            this.Token.Name = "Token";
+            this.Token.Size = new System.Drawing.Size(71, 104);
+            this.Token.TabIndex = 18;
+            this.Token.UseVisualStyleBackColor = true;
+            this.Token.Click += new System.EventHandler(this.Token_Click);
             // 
             // Fusion
             // 
@@ -252,22 +250,33 @@
             this.Level.TabIndex = 29;
             this.Level.SelectedIndexChanged += new System.EventHandler(this.Level_SelectedIndexChanged);
             // 
+            // DuelistKingdomCard
+            // 
+            this.DuelistKingdomCard.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Duelist_Kingdom_Card__Custom_;
+            this.DuelistKingdomCard.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DuelistKingdomCard.Location = new System.Drawing.Point(489, 91);
+            this.DuelistKingdomCard.Name = "DuelistKingdomCard";
+            this.DuelistKingdomCard.Size = new System.Drawing.Size(71, 104);
+            this.DuelistKingdomCard.TabIndex = 30;
+            this.DuelistKingdomCard.UseVisualStyleBackColor = true;
+            this.DuelistKingdomCard.Click += new System.EventHandler(this.DuelistKingdomCard_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 395);
+            this.Controls.Add(this.DuelistKingdomCard);
             this.Controls.Add(this.Level);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LegendaryDragon);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Effect);
+            this.Controls.Add(this.Trap);
+            this.Controls.Add(this.Magic);
+            this.Controls.Add(this.NormalMonster);
+            this.Controls.Add(this.Ritual);
+            this.Controls.Add(this.Synchro);
+            this.Controls.Add(this.Token);
             this.Controls.Add(this.Fusion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Element);
@@ -293,17 +302,17 @@
         private System.Windows.Forms.ComboBox Element;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Fusion;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button Token;
+        private System.Windows.Forms.Button Synchro;
+        private System.Windows.Forms.Button Ritual;
+        private System.Windows.Forms.Button NormalMonster;
+        private System.Windows.Forms.Button Magic;
+        private System.Windows.Forms.Button Trap;
+        private System.Windows.Forms.Button Effect;
         private System.Windows.Forms.Button LegendaryDragon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox Level;
+        private System.Windows.Forms.Button DuelistKingdomCard;
 
 
 

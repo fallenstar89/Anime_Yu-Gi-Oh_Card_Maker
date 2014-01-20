@@ -21,13 +21,13 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
             InitializeComponent();
         }
         String IconSeletion="Wind";
-        String CardSeletion;
-        String LevelSelection;
+        String CardSeletion="Fusion";
+        String LevelSelection="1";
         private void button1_Click(object sender, EventArgs e)
         {
             String ATK = ATKt.Text;
             String DEF = DEFt.Text;
-            Image mainImage = Bitmap.FromFile("Resources/" + "Fusion" + ".jpg");
+            Image mainImage = Bitmap.FromFile("Resources/" + CardSeletion + ".jpg");
             Image Icon = Bitmap.FromFile("Resources/" + IconSeletion + ".png");
             Image Level = Bitmap.FromFile("Resources/" + LevelSelection + ".png");
 
@@ -46,8 +46,11 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
             using (Graphics g = Graphics.FromImage(mainImage))
             {
                 //draw other image on top of main Image
-                g.DrawImage(Icon, new Point(0, 0));
-                g.DrawImage(Level, new Point(0, 0));
+                if (CardSeletion.Equals("Effect") || CardSeletion.Equals("Fusion") || CardSeletion.Equals("Ritual") || CardSeletion.Equals("Synchro"))
+                { 
+                    g.DrawImage(Icon, new Point(0, 0));
+                    g.DrawImage(Level, new Point(0, 0));
+                }
                // if (string.IsNullOrEmpty(ATK)) { ATK = "800"; };
                 SizeF si = g.MeasureString(ATK, this.Font);
                 float fontScale = 15;
@@ -72,14 +75,60 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
         }
 
 
-        private void Fusion_Click(object sender, EventArgs e)
-        {
-             CardSeletion = "Fusion";
-        }
-
         private void Level_SelectedIndexChanged(object sender, EventArgs e)
         {
             LevelSelection = Level.SelectedItem.ToString();
+        }
+
+
+        private void Fusion_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Fusion";
+        }
+
+        private void LegendaryDragon_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "LegendaryDragon";
+        }
+
+        private void DuelistKingdomCard_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "DuelistKingdomCard";
+        }
+
+        private void Effect_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Effect";
+        }
+
+        private void Trap_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Trap";
+        }
+
+        private void Magic_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Magic";
+        }
+
+        private void NormalMonster_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "NormalMonster";
+        }
+
+        private void Ritual_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Ritual";
+        }
+
+        private void Synchro_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Synchro";
+        }
+
+        private void Token_Click(object sender, EventArgs e)
+        {
+            CardSeletion = "Token";
         }
 
        
