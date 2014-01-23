@@ -47,6 +47,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Level = new System.Windows.Forms.ComboBox();
             this.DuelistKingdomCard = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ImportImage = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -65,7 +69,7 @@
             this.ATKt.Name = "ATKt";
             this.ATKt.Size = new System.Drawing.Size(100, 20);
             this.ATKt.TabIndex = 2;
-            this.ATKt.Text = ".5";
+            this.ATKt.Text = "500";
             // 
             // label1
             // 
@@ -91,7 +95,7 @@
             this.DEFt.Name = "DEFt";
             this.DEFt.Size = new System.Drawing.Size(100, 20);
             this.DEFt.TabIndex = 5;
-            this.DEFt.Text = "100";
+            this.DEFt.Text = "800";
             // 
             // Element
             // 
@@ -217,6 +221,7 @@
             this.Fusion.Size = new System.Drawing.Size(71, 104);
             this.Fusion.TabIndex = 17;
             this.Fusion.UseVisualStyleBackColor = true;
+            this.Fusion.Click += new System.EventHandler(this.Fusion_Click);
             // 
             // label4
             // 
@@ -261,11 +266,42 @@
             this.DuelistKingdomCard.UseVisualStyleBackColor = true;
             this.DuelistKingdomCard.Click += new System.EventHandler(this.DuelistKingdomCard_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(22, 201);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 100);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 171);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Selected Card Image";
+            // 
+            // ImportImage
+            // 
+            this.ImportImage.Location = new System.Drawing.Point(461, 346);
+            this.ImportImage.Name = "ImportImage";
+            this.ImportImage.Size = new System.Drawing.Size(99, 23);
+            this.ImportImage.TabIndex = 34;
+            this.ImportImage.Text = "Import Image";
+            this.ImportImage.UseVisualStyleBackColor = true;
+            this.ImportImage.Click += new System.EventHandler(this.ImportImage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 395);
+            this.Controls.Add(this.ImportImage);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DuelistKingdomCard);
             this.Controls.Add(this.Level);
             this.Controls.Add(this.label4);
@@ -286,7 +322,8 @@
             this.Controls.Add(this.ATKt);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Attack Level";
+            this.Text = "Card maker";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +350,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox Level;
         private System.Windows.Forms.Button DuelistKingdomCard;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button ImportImage;
 
 
 

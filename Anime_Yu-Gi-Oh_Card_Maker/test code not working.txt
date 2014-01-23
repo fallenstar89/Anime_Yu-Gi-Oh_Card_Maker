@@ -1,0 +1,7 @@
+    // if (string.IsNullOrEmpty(ATK)) { ATK = "800"; };
+                SizeF si = g.MeasureString(ATK, this.Font);
+                float fontScale = 15;
+                using (Font font = new Font("EuroRoman", this.Font.SizeInPoints / fontScale, GraphicsUnit.Point))
+                {
+                    g.DrawString(ATK, font, Brushes.Black, rect1, stringFormat);
+                }

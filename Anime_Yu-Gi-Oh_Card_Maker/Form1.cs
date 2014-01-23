@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Diagnostics;
-using System.Collections;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 
 namespace Anime_Yu_Gi_Oh_Card_Maker
@@ -20,9 +20,11 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
         {
             InitializeComponent();
         }
-        String IconSeletion="Wind";
-        String CardSeletion="Fusion";
-        String LevelSelection="1";
+        String IconSeletion = "Wind";
+        String CardSeletion = "Fusion";
+        String LevelSelection = "1";
+        PrivateFontCollection pfc = new PrivateFontCollection();
+        Image userimage;
         private void button1_Click(object sender, EventArgs e)
         {
             String ATK = ATKt.Text;
@@ -32,7 +34,6 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
             Image Level = Bitmap.FromFile("Resources/" + LevelSelection + ".png");
 
             Rectangle rect1 = new Rectangle(49, 505, 261, 506);
-            Rectangle rect2 = new Rectangle(49, 505, 261, 506);
 
             StringFormat stringFormat = new StringFormat()
             {
@@ -41,37 +42,56 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
             };
 
 
-            
-            
+
+
             using (Graphics g = Graphics.FromImage(mainImage))
             {
                 //draw other image on top of main Image
                 if (CardSeletion.Equals("Effect") || CardSeletion.Equals("Fusion") || CardSeletion.Equals("Ritual") || CardSeletion.Equals("Synchro"))
-                { 
+                {
                     g.DrawImage(Icon, new Point(0, 0));
                     g.DrawImage(Level, new Point(0, 0));
                 }
-               // if (string.IsNullOrEmpty(ATK)) { ATK = "800"; };
-                SizeF si = g.MeasureString(ATK, this.Font);
-                float fontScale = 15;
-                using (Font font = new Font("EuroRoman", this.Font.SizeInPoints / fontScale, GraphicsUnit.Point))
-                {
-                    g.DrawString(ATK, font, Brushes.Black, rect1, stringFormat);
-                }
+
+                if (userimage != null) { userimage = ScaleImage(userimage, 150, 160); g.DrawImage(userimage, 14, 14); }
+
+                //pictureBox1.Image = userimage;
+
+                
+               // Create font and brush.
+                Font drawFont = new Font("EuroRoman", 16);
+                SolidBrush drawBrush = new SolidBrush(Color.Black);
+
+                // Create point for upper-left corner of drawing.
+                PointF ATKl = new PointF(90.0F, 706.0F);
+
+                // Draw string to screen.
+                g.DrawString(ATK, drawFont, drawBrush, ATKl);
+
+                //DEF------------------------------------------- DEF
+                // Create font and brush.
+                // Create point for upper-left corner of drawing.
+                PointF DEFl = new PointF(350.0F, 706.0F);
+
+                // Draw string to screen.
+                g.DrawString(DEF, drawFont, drawBrush, DEFl);
+
 
                 //save new image
                 mainImage.Save("classy.png");
-            }
-           
-           //pictureBox1.Image = Main;
 
-                       
+                
+
+                //pictureBox1.Image = Main;
+
+
+            }
         }
+
 
         private void Element_SelectedIndexChanged(object sender, EventArgs e)
         {
             IconSeletion = Element.SelectedItem.ToString();
-      
         }
 
 
@@ -80,64 +100,117 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
             LevelSelection = Level.SelectedItem.ToString();
         }
 
-
         private void Fusion_Click(object sender, EventArgs e)
         {
             CardSeletion = "Fusion";
+            Bitmap bmp = Properties.Resources.Fusion__69x100_;
+            pictureBox1.Image = bmp;
         }
 
         private void LegendaryDragon_Click(object sender, EventArgs e)
         {
             CardSeletion = "LegendaryDragon";
+            Bitmap bmp = Properties.Resources.Legendary_Dragon__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void DuelistKingdomCard_Click(object sender, EventArgs e)
         {
             CardSeletion = "DuelistKingdomCard";
+            Bitmap bmp = Properties.Resources.Duelist_Kingdom_Card__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void Effect_Click(object sender, EventArgs e)
         {
             CardSeletion = "Effect";
+            Bitmap bmp = Properties.Resources.Effect__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void Trap_Click(object sender, EventArgs e)
         {
             CardSeletion = "Trap";
+            Bitmap bmp = Properties.Resources.Trap__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void Magic_Click(object sender, EventArgs e)
         {
             CardSeletion = "Magic";
+            Bitmap bmp = Properties.Resources.Magic__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void NormalMonster_Click(object sender, EventArgs e)
         {
             CardSeletion = "NormalMonster";
+            Bitmap bmp = Properties.Resources.Normal_Monster__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void Ritual_Click(object sender, EventArgs e)
         {
             CardSeletion = "Ritual";
+            Bitmap bmp = Properties.Resources.Ritual__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void Synchro_Click(object sender, EventArgs e)
         {
             CardSeletion = "Synchro";
+            Bitmap bmp = Properties.Resources.Synchro__Custom_;
+            pictureBox1.Image = bmp;
         }
 
         private void Token_Click(object sender, EventArgs e)
         {
             CardSeletion = "Token";
+            Bitmap bmp = Properties.Resources.Token__Custom_;
+            pictureBox1.Image = bmp;
         }
 
-       
 
 
+        private void ImportImage_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Open Image";
+                dlg.Filter = "Image Files (*.jpg, *.gif, *.png, *.bmp)|*.jpg;*.gif;*.png;*.bmp|JPEG Files (*.jpg, *.jpeg)|*.jpg;*.jpeg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|GIF Files (*.gif)|*.gif";
 
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
 
+                    // Create a new Bitmap object from the picture file on disk,
+                    // and assign that to the PictureBox.Image property
+                    userimage = new Bitmap(dlg.FileName);
+                }
 
-     
+            }
+        }
 
+        public static Image ScaleImage(Image image, int maxWidth, int maxHeight)
+        {
+            var newImage = new Bitmap(maxWidth, maxHeight);
+            Graphics.FromImage(newImage).DrawImage(image, 0, 0, maxWidth, maxHeight);
+            return newImage;
+        }
+        private void LoadFont()
+        {
+            Stream fontStream = this.GetType().Assembly.GetManifestResourceStream("embedfont.Font.ttf");
+            byte[] fontdata = new byte[fontStream.Length];
+      fontStream.Read(fontdata,0,(int)fontStream.Length);
+      fontStream.Close();
+      unsafe
+      {
+        fixed(byte * pFontData = fontdata)
+        {
+          pfc.AddMemoryFont((System.IntPtr)pFontData,fontdata.Length);
+        }
+      }
+        }
     }
 }
+        
+     
