@@ -12,8 +12,4 @@ Feature Complete:
   * Image import button to add custom image to card
   * Outputs a png image
 
-#Version 2.0
-Optimization:
-   
-  * Embeded Images
 
