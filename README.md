@@ -13,3 +13,4 @@ Feature Complete:
   * Outputs a png image
 
 
+[License Page](https://github.com/ballju/Anime_Yu-Gi-Oh_Card_Maker/blob/master/LICENSE.md)
