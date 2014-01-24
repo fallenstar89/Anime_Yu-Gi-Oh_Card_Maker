@@ -10,6 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using System.Drawing.Imaging;
 
 
 namespace Anime_Yu_Gi_Oh_Card_Maker
@@ -47,46 +48,51 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
             using (Graphics g = Graphics.FromImage(mainImage))
             {
                 //draw other image on top of main Image
+
+                // Create font and brush.
+                Font drawFont = new Font("EuroRoman", 16);
+                SolidBrush drawBrush = new SolidBrush(Color.Black);
+
+                // Create point f
+                PointF ATK1 = new PointF(90.0F, 706.0F);
+                PointF DEF1 = new PointF(350.0F, 706.0F);
+
+                PointF ATK2 = new PointF(70.0F, 706.0F);
+                PointF DEF2 = new PointF(330.0F, 706.0F);
+
+
+
                 if (CardSeletion.Equals("Effect") || CardSeletion.Equals("Fusion") || CardSeletion.Equals("Ritual") || CardSeletion.Equals("Synchro"))
                 {
                     g.DrawImage(Icon, new Point(0, 0));
                     g.DrawImage(Level, new Point(0, 0));
+                    if (ATK.Length == 3) { g.DrawString(ATK, drawFont, drawBrush, ATK1); } else { g.DrawString(ATK, drawFont, drawBrush, ATK2); }
+                    if (DEF.Length == 3) { g.DrawString(DEF, drawFont, drawBrush, DEF1); } else { g.DrawString(DEF, drawFont, drawBrush, DEF2); }
                 }
 
                 if (userimage != null) { userimage = ScaleImage(userimage, 150, 160); g.DrawImage(userimage, 14, 14); }
 
                 //pictureBox1.Image = userimage;
 
-                
-               // Create font and brush.
-                Font drawFont = new Font("EuroRoman", 16);
-                SolidBrush drawBrush = new SolidBrush(Color.Black);
-
-                // Create point for upper-left corner of drawing.
-                PointF ATKl = new PointF(90.0F, 706.0F);
-
-                // Draw string to screen.
-                g.DrawString(ATK, drawFont, drawBrush, ATKl);
-
-                //DEF------------------------------------------- DEF
-                // Create font and brush.
-                // Create point for upper-left corner of drawing.
-                PointF DEFl = new PointF(350.0F, 706.0F);
-
-                // Draw string to screen.
-                g.DrawString(DEF, drawFont, drawBrush, DEFl);
-
 
                 //save new image
-                mainImage.Save("classy.png");
+                SaveFileDialog dialog = new SaveFileDialog();
+                ImageFormat format = ImageFormat.Png;
+                dialog.Filter = "PNG (*.png)|*.png";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    mainImage.Save(dialog.FileName, format);
+                }
 
-                
+
+
 
                 //pictureBox1.Image = Main;
 
 
             }
         }
+        
 
 
         private void Element_SelectedIndexChanged(object sender, EventArgs e)

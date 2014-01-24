@@ -35,6 +35,12 @@
             this.DEFt = new System.Windows.Forms.TextBox();
             this.Element = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Level = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ImportImage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DuelistKingdomCard = new System.Windows.Forms.Button();
             this.LegendaryDragon = new System.Windows.Forms.Button();
             this.Effect = new System.Windows.Forms.Button();
             this.Trap = new System.Windows.Forms.Button();
@@ -44,12 +50,6 @@
             this.Synchro = new System.Windows.Forms.Button();
             this.Token = new System.Windows.Forms.Button();
             this.Fusion = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Level = new System.Windows.Forms.ComboBox();
-            this.DuelistKingdomCard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ImportImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             this.ATKt.Name = "ATKt";
             this.ATKt.Size = new System.Drawing.Size(100, 20);
             this.ATKt.TabIndex = 2;
-            this.ATKt.Text = "500";
+            this.ATKt.Text = "1500";
             // 
             // label1
             // 
@@ -95,7 +95,7 @@
             this.DEFt.Name = "DEFt";
             this.DEFt.Size = new System.Drawing.Size(100, 20);
             this.DEFt.TabIndex = 5;
-            this.DEFt.Text = "800";
+            this.DEFt.Text = "1800";
             // 
             // Element
             // 
@@ -123,6 +123,78 @@
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Select Element";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(504, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Level";
+            // 
+            // Level
+            // 
+            this.Level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Level.FormattingEnabled = true;
+            this.Level.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.Level.Location = new System.Drawing.Point(507, 49);
+            this.Level.Name = "Level";
+            this.Level.Size = new System.Drawing.Size(121, 21);
+            this.Level.TabIndex = 29;
+            this.Level.SelectedIndexChanged += new System.EventHandler(this.Level_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 171);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Selected Card Image";
+            // 
+            // ImportImage
+            // 
+            this.ImportImage.Location = new System.Drawing.Point(461, 346);
+            this.ImportImage.Name = "ImportImage";
+            this.ImportImage.Size = new System.Drawing.Size(99, 23);
+            this.ImportImage.TabIndex = 34;
+            this.ImportImage.Text = "Import Image";
+            this.ImportImage.UseVisualStyleBackColor = true;
+            this.ImportImage.Click += new System.EventHandler(this.ImportImage_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.InitialImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Fusion__69x100_;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 201);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 100);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // DuelistKingdomCard
+            // 
+            this.DuelistKingdomCard.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Duelist_Kingdom_Card__Custom_;
+            this.DuelistKingdomCard.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DuelistKingdomCard.Location = new System.Drawing.Point(489, 91);
+            this.DuelistKingdomCard.Name = "DuelistKingdomCard";
+            this.DuelistKingdomCard.Size = new System.Drawing.Size(71, 104);
+            this.DuelistKingdomCard.TabIndex = 30;
+            this.DuelistKingdomCard.UseVisualStyleBackColor = true;
+            this.DuelistKingdomCard.Click += new System.EventHandler(this.DuelistKingdomCard_Click);
             // 
             // LegendaryDragon
             // 
@@ -222,77 +294,6 @@
             this.Fusion.TabIndex = 17;
             this.Fusion.UseVisualStyleBackColor = true;
             this.Fusion.Click += new System.EventHandler(this.Fusion_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(504, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Level";
-            // 
-            // Level
-            // 
-            this.Level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Level.FormattingEnabled = true;
-            this.Level.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.Level.Location = new System.Drawing.Point(507, 49);
-            this.Level.Name = "Level";
-            this.Level.Size = new System.Drawing.Size(121, 21);
-            this.Level.TabIndex = 29;
-            this.Level.SelectedIndexChanged += new System.EventHandler(this.Level_SelectedIndexChanged);
-            // 
-            // DuelistKingdomCard
-            // 
-            this.DuelistKingdomCard.BackgroundImage = global::Anime_Yu_Gi_Oh_Card_Maker.Properties.Resources.Duelist_Kingdom_Card__Custom_;
-            this.DuelistKingdomCard.Cursor = System.Windows.Forms.Cursors.Default;
-            this.DuelistKingdomCard.Location = new System.Drawing.Point(489, 91);
-            this.DuelistKingdomCard.Name = "DuelistKingdomCard";
-            this.DuelistKingdomCard.Size = new System.Drawing.Size(71, 104);
-            this.DuelistKingdomCard.TabIndex = 30;
-            this.DuelistKingdomCard.UseVisualStyleBackColor = true;
-            this.DuelistKingdomCard.Click += new System.EventHandler(this.DuelistKingdomCard_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(22, 201);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 100);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 171);
-            this.label6.Name = "label6";
-            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(106, 13);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Selected Card Image";
-            // 
-            // ImportImage
-            // 
-            this.ImportImage.Location = new System.Drawing.Point(461, 346);
-            this.ImportImage.Name = "ImportImage";
-            this.ImportImage.Size = new System.Drawing.Size(99, 23);
-            this.ImportImage.TabIndex = 34;
-            this.ImportImage.Text = "Import Image";
-            this.ImportImage.UseVisualStyleBackColor = true;
-            this.ImportImage.Click += new System.EventHandler(this.ImportImage_Click);
             // 
             // Form1
             // 
