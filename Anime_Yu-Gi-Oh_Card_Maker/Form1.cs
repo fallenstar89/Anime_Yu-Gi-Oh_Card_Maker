@@ -50,7 +50,7 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
                 //draw other image on top of main Image
 
                 // Create font and brush.
-                Font drawFont = new Font("EuroRoman", 16);
+                Font drawFont = new Font("EuroRoman", 16,FontStyle.Bold);
                 SolidBrush drawBrush = new SolidBrush(Color.Black);
 
                 // Create point f
@@ -61,6 +61,7 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
                 PointF DEF2 = new PointF(330.0F, 706.0F);
 
 
+                if (userimage != null) { userimage = ScaleImage(userimage, 150, 160); g.DrawImage(userimage, 13, 14); }
 
                 if (CardSeletion.Equals("Effect") || CardSeletion.Equals("Fusion") || CardSeletion.Equals("Ritual") || CardSeletion.Equals("Synchro"))
                 {
@@ -70,7 +71,6 @@ namespace Anime_Yu_Gi_Oh_Card_Maker
                     if (DEF.Length == 3) { g.DrawString(DEF, drawFont, drawBrush, DEF1); } else { g.DrawString(DEF, drawFont, drawBrush, DEF2); }
                 }
 
-                if (userimage != null) { userimage = ScaleImage(userimage, 150, 160); g.DrawImage(userimage, 14, 14); }
 
                 //pictureBox1.Image = userimage;
 
